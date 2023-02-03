@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load django_tables2 %}
+{% block extra %}
+    {% render_table table %}
+{% endblock %}
+{% block main %}
+    {% for item in Table %}
+        <p>{{ item }}</p>
+    {% endfor %}
+   <form action="/add">
+        <button class = 'btn btn-success'>Add Orders</button>
+   </form>
+
+{% endblock %}
